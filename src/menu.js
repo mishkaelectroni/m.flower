@@ -12,15 +12,15 @@ class Menu extends Component {
 	}
 	render() {
 		console.log('isOpened', this.state.isOpened);
+		console.log('items', this.props.items);
 		let menuText;
 		if (this.state.isOpened) {
 			menuText = <div className="menuLogo">
 					<ul>
-						<li><a href="#">декоративно-цветущие</a></li>
-						<li><a href="#">декоративно-лиственные</a></li>
-						<li><a href="#">кактусы и суккуленты</a></li>
-						<li><a href="#">орхидеи</a></li>
-						<li><a href="#">горшки и кашпо</a></li>
+						<li>{this.props.items.map((item, index) =>
+						  <a href={item.link} key={index}>{item.label}</a>
+						)}</li>
+						
 					</ul>
 			  </div>
 		}

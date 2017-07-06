@@ -2,26 +2,33 @@
   text-align: center;
 }
 .App-header {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  background-image: url(/src/img/head.jpg);
+  background-size: cover;
   background-color: #191919;
   opacity: 0.8;
   padding: 20px;
   color: white;
 }
+.App-header img {
+  width: 35px;
+}
 .App-menu {  
   color: #fff;
+  display: block;
 }
 .App-menu:before{
   content: '\2261';  
   display: inline-block;
+  width: 100%;
   font: 2em "arial";
   color: #fff;
 }
-.App-intro {
-  font-size: large;
-}
 
 .menuLogo {
-  overflow:hidden;
+ display: block;
+ position: relative;
 }
 .menuLogo ul {
   display: inline-block;
@@ -31,17 +38,31 @@
 .menuLogo li {
   padding: 5px 35px;
   border: 1px solid #E5E103;
+  background-color: #5A5A5A;
 }
 .menuLogo li:hover {
-  background-color: #5A5A5A;
+  background-color: #191919;
     opacity: 0.7; 
 }
 .menuLogo a {
   color: #fff; 
   font-size: 0.9em; 
-
 }
 
 .mainContent {
   padding: 5px;
+  display: block;
+  background-color: green;
+  font-size: 0.7em; 
+  line-height: 0.5em;
 }
+.mainContent li {
+  display: inline-block;
+  padding: 7px;
+}
+.mainContent img {
+    width: 100%;
+    max-width: 100px;
+    margin: 0 auto;
+    display: block;
+  }
