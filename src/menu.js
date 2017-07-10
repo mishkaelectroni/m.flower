@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
 
 class Menu extends Component {
 
+	
 	constructor(props) {
 		super(props);
 		this.state = { isOpened: false };
@@ -12,24 +15,27 @@ class Menu extends Component {
 	}
 	render() {
 		console.log('isOpened', this.state.isOpened);
-		console.log('items', this.props.items);
+	
 		let menuText;
 		if (this.state.isOpened) {
 			menuText = <div className="menuLogo">
-					<ul>
-						<li>{this.props.items.map((item, index) =>
-						  <a href={item.link} key={index}>{item.label}</a>
-						)}</li>
+					
+					{this.props.items.map((item, index) => 
 						
-					</ul>
+						<a href={item.link} key={index}>{item.label}</a>
+						
+					)}
+
 			  </div>
 		}
 		return (
-			<div onClick={this.toggleState.bind(this)} className="App-menu">
-				 
+			<div onClick={this.toggleState.bind(this)} className="App-menu">				 
 				{ menuText }
+				
 			</div>
 			);
 	}
 }
+
 export default Menu;
+

@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import { Router, Route, hasHistory } from 'react-router';
+import ReactDOM from 'react-dom';
+import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
+import { connect } from 'react-redux';
 import './App.css';
-import Menu from './menu.js';
-import Basket from './basket.js';
-import Form from './form.js';
-import About from './about.js';
+import Menu from './menu';
+import Basket from './basket';
+import Form from './form';
+import Search from './search';
 
 const menu = [
   {
-    link: '/home',
-    label: 'home'
+    link: './dekor-list',
+    label: 'декоративно-лиственные'
   },
   {
-    link: '/category',
-    label: 'category'
+    link: './dekor-cvet',
+    label: 'декоративно-цветущие'
   },
   {
-    link: '/contact',
-    label: 'contact'
+    link: './kaktus',
+    label: 'кактусы и суккуленты'
+  },
+  {
+    link: './orhidei',
+    label: 'орхидеи'
+  },
+  {
+    link: './gorshki',
+    label: 'горшки и кашпо'
   }
-];
+]
 
 class App extends Component {
   render() {
@@ -30,7 +40,7 @@ class App extends Component {
         
              <Basket />
              <Menu items={menu} />              
-             <Form />
+             <Search />
                      
         </div>
 
@@ -39,13 +49,13 @@ class App extends Component {
             <li>
               <img src={require('./img/product-c1.png')}/>
               <p>декоративно-цветущие</p>
-              <h4>Азалия белая</h4>
+              <h4>јзали¤ бела¤</h4>
               <a href={'#'}>55грн</a>
             </li>
             <li>
               <img src={require('./img/product-c1.png')}/>
               <p>декоративно-цветущие</p>
-              <h4>Азалия белая</h4>
+              <h4>јзали¤ бела¤</h4>
               <a href={'#'}>55грн</a>
             </li>
           </ul>
@@ -53,20 +63,25 @@ class App extends Component {
             <li>
               <img src={require('./img/product-c1.png')}/>
               <p>декоративно-цветущие</p>
-              <h4>Азалия белая</h4>
+              <h4>јзали¤ бела¤</h4>
               <a href={'#'}>55грн</a>
             </li>
             <li>
               <img src={require('./img/product-c1.png')}/>
               <p>декоративно-цветущие</p>
-              <h4>Азалия белая</h4>
+              <h4>јзали¤ бела¤</h4>
               <a href={'#'}>55грн</a>
             </li>
           </ul>
-        </div>         
+        </div> 
+        <div>
+          <Form />
+        </div>        
       </div>
     );
   }
 }
 
 export default App;
+
+

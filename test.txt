@@ -1,0 +1,52 @@
+class App extends Component {
+  render() {
+
+    return (
+      <div className="App">
+        <div className="App-header">
+        
+             <Basket />
+             <Menu  />              
+             <Form />
+                     
+        </div>
+
+        <div className="mainContent"> 
+          <ul>
+            <li>
+              <img src={require('./img/product-c1.png')}/>
+              <p>декоративно-цветущие</p>
+              <h4>јзали€ бела€</h4>
+              <a href={'#'}>55грн</a>
+            </li>
+            <li>
+              <img src={require('./img/product-c1.png')}/>
+              <p>декоративно-цветущие</p>
+              <h4>јзали€ бела€</h4>
+              <a href={'#'}>55грн</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <img src={require('./img/product-c1.png')}/>
+              <p>декоративно-цветущие</p>
+              <h4>јзали€ бела€</h4>
+              <a href={'#'}>55грн</a>
+            </li>
+            <li>
+              <img src={require('./img/product-c1.png')}/>
+              <p>декоративно-цветущие</p>
+              <h4>јзали€ бела€</h4>
+              <a href={'#'}>55грн</a>
+            </li>
+          </ul>
+        </div>         
+      </div>
+    );
+  }
+}
+
+export default App;
+
+ <a href={'#'}><img src={require('./img/postpaper.jpg')}/>
+				</a>

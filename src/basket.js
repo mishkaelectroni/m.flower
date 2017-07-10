@@ -6,8 +6,9 @@ class Basket extends Component {
 				
 		return (
 			<div className="Basket">
-				 
-				<img src={require('./img/basket.png')}/>
+				 <a href={'#'}>
+					<img src={require('./img/basket.png')}/>
+				</a>
 			</div>
 		);
 	}
