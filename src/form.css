@@ -1,0 +1,17 @@
+.form {
+	display: block;
+
+	margin-top: 10px;
+}
+.emailField {
+	width: 196px;
+	height: 30px;
+	display: block;	
+	margin: auto;
+}
+.submitBtn {
+	width: 200px;
+	height: 35px;
+	margin-top: 10px;
+	background: #E5E103;
+}

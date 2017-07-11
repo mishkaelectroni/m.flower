@@ -48,5 +48,43 @@ class App extends Component {
 
 export default App;
 
- <a href={'#'}><img src={require('./img/postpaper.jpg')}/>
-				</a>
+///////MENU.js
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+class Menu extends Component {
+	
+	constructor(props) {
+		super(props);
+		this.state = { isOpened: false };
+	}
+
+	toggleState() {
+		this.setState({ isOpened: !this.state.isOpened });
+	}
+	render() {
+		console.log('isOpened', this.state.isOpened);
+	
+		let menuText;
+		if (this.state.isOpened) {
+			menuText = <div className="menuLogo">			
+										
+						<div>
+		                     <Link to="/">home</Link>
+		                     
+		                     <Link to="/about">О нас</Link>
+		                </div>						
+					
+			</div>
+		}
+		return (
+			<div onClick={this.toggleState.bind(this)} className="App-menu">			 
+				
+				{ menuText }
+			</div>
+			);
+	}
+}
+
+export default Menu;

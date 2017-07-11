@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class Menu extends Component {
-
 	
 	constructor(props) {
 		super(props);
@@ -19,19 +18,19 @@ class Menu extends Component {
 		let menuText;
 		if (this.state.isOpened) {
 			menuText = <div className="menuLogo">
-					
-					{this.props.items.map((item, index) => 
-						
-						<a href={item.link} key={index}>{item.label}</a>
-						
-					)}
-
-			  </div>
+		                     <ul>
+			                     <li><Link to="/">главная</Link></li>
+			                     <li><Link to="/decorCvet">декоративно-цветущие</Link></li>
+			                     <li><Link to="/decorList">декоративно-лиственные</Link></li>
+			                     <li><Link to="/kaktus">кактусы и суккуленты</Link></li>
+			                     <li><Link to="/orhidei">орхидеи</Link></li>
+			                     <li><Link to="/about">o нас</Link></li>
+		                     </ul>
+			</div>
 		}
 		return (
-			<div onClick={this.toggleState.bind(this)} className="App-menu">				 
+			<div onClick={this.toggleState.bind(this)} className="App-menu">	
 				{ menuText }
-				
 			</div>
 			);
 	}

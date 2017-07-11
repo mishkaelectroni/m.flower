@@ -7,7 +7,7 @@ class Search extends Component {
 		return (
 			<div className="search">
 				 <a href={'#'}>
-					<img src={require('./img/search.jpg')}/>
+					&#128269;
 				</a>
 			</div>
 		);

@@ -6,9 +6,12 @@ class Form extends Component {
 		this.state = {
 			email: ''
 		};
+		this.handleEmailChange = this.handleEmailChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	handleSubmit() {
+	handleSubmit(event) {
+		event.preventDefault();	
 	  console.log('form submitted and email value is', this.state.email);
 	}
 
@@ -27,8 +30,9 @@ class Form extends Component {
 					placeholder="E-mail"
 					value={this.state.email}
 					onChange={this.handleEmailChange}
+					className="emailField"
 				/>	
-				<button>Save</button>
+				<button className="submitBtn">Save</button>
 			</form>
 			</div>
 		);
