@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 class Search extends Component {
 	
 	render() {
 				
 		return (
-			<div className="search">
-				 <a href={'#'}>
-					&#128269;
-				</a>
-			</div>
+			<div> it si search </div>
 		);
 	}
 }

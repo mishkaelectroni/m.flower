@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import { connect } from 'react-redux'
-import { Link } from 'react-router'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css'
 import './form.css'
 import Menu from './menu'
@@ -16,22 +14,26 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
         
-             <Basket />
+            <div className="Basket">
+              <Link to="/basket"><img src={require('./img/basket.png')}/></Link>        
+            </div>
              <Menu  />              
-             <Search />
+            <div className="search">
+              <Link to="/search"> &#128269; </Link>             
+            </div>
                      
         </div>
 
         <div className="mainContent"> 
           <ul>
             <li>
-              <img src={require('./img/product-c1.png')}/>
+              <img src={require('./img/product-c1.png')} alt="foto"/>
               <p>декоративно-цветущие</p>
               <h4>јзали¤ бела¤</h4>
               <a href={'#'}>55грн</a>
             </li>
             <li>
-              <img src={require('./img/product-c1.png')}/>
+              <img src={require('./img/product-c1.png')} alt="foto"/>
               <p>декоративно-цветущие</p>
               <h4>јзали¤ бела¤</h4>
               <a href={'#'}>55грн</a>
@@ -39,13 +41,13 @@ class App extends Component {
           </ul>
           <ul>
             <li>
-              <img src={require('./img/product-c1.png')}/>
+              <img src={require('./img/product-c1.png')} alt="foto"/>
               <p>декоративно-цветущие</p>
               <h4>јзали¤ бела¤</h4>
               <a href={'#'}>55грн</a>
             </li>
             <li>
-              <img src={require('./img/product-c1.png')}/>
+              <img src={require('./img/product-c1.png')} alt="foto"/>
               <p>декоративно-цветущие</p>
               <h4>јзали¤ бела¤</h4>
               <a href={'#'}>55грн</a>
